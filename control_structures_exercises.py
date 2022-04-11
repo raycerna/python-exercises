@@ -2,6 +2,9 @@
 
 # a. prompt the user for a day of the week, print out whether the day is Monday or not
 
+from calendar import c
+
+
 day_of_week = input ("enter day of week")
 if day_of_week == 'Monday':
     print ("It is Monday.")
@@ -254,6 +257,13 @@ while True:
     if user_choice="no":
         break
 
+#ravinder example
+ print('Here is your table!')
+ print('number | squared')
+ 
+ num = int(num)
+ for i in range(1, num + 1):
+
 #5 Convert given number grades into letter grades.
 
 #Prompt the user for a numerical grade from 0 to 100.
@@ -284,12 +294,37 @@ while True:
         print('F')
 
 
+#ravinder example:
+
+while True:
+    num = input('Please enter the numeric grade:')
+    num = int(num)
+    if num >= 88:
+        print('A')
+    elif num >= 80:
+        print('B')
+    elif num >= 67:
+        print('C')
+    elif num >= 60:
+        print('D')
+    else:
+        print('F')
+
+
+    choice = input('Do you want to continue? Please enter "yes" or "y" to continue:')
+    if choice.lower() in ['yes', 'y']:
+        continue
+    else:
+        break
+
 #6 Create a list of dictionaries where each dictionary represents a book that you have read. 
 # Each dictionary in the list should have the keys title, author, and genre. 
 # Loop through the list and print out information about each book.
 
 book_list=[{'title':"First to Fight",'author':"Victor H. Krulak",'genre':"War"},
-{'title':"Black Hearts",'author':"Jim Fredrick",'genre':"War"},{'title':"The Marines at Montford Point",'author':"Melton Mclaurin",'genre':"History"},{'title':"Tattoos as Punishment",'author':"Eric Shahan",'genre':"History"}]
+{'title':"Black Hearts",'author':"Jim Fredrick",'genre':"War"},
+{'title':"The Marines at Montford Point",'author':"Melton Mclaurin",'genre':"History"},
+{'title':"Tattoos as Punishment",'author':"Eric Shahan",'genre':"History"}]
 
 for book in book_list:
     print("The book title is: "+book['title'])
@@ -300,8 +335,13 @@ for book in book_list:
 # Prompt the user to enter a genre, then loop through your books list 
 # and print out the titles of all the books in that genre.
 
-genre_filter=input("Please enter a genre")
+
 for book in book_list:
     if book['genre']==genre_filter:
         print("The book title is: "+book['title'])
         print("The book author is: "+book['author'])
+
+#ravinder example
+
+for book in books:
+    print(f" the book {book['title']} by author {book['author']} belongs to {book['genre']}")
