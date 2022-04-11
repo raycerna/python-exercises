@@ -344,4 +344,4 @@ for book in book_list:
 #ravinder example
 
 for book in books:
-    print(f" the book {book['title']} by author {book['author']} belongs to {book['genre']}")
+    print(f" the book {book['title']} by author {book['author']} belongs to {book['genre']}")           
