@@ -8,6 +8,14 @@ if day_of_week == 'Monday':
 else:
     print ("No it is not Monday.")
 
+day = input('Please enter the day of the week: ')
+
+if day.lower() in ['monday', 'mon']:
+    print('Today is Monday')
+else:
+    print(f'Today is {day.capitalize()}')
+
+
 # b. prompt the user for a day of the week, 
 # print out whether the day is a weekday or a weekend
 
@@ -16,6 +24,15 @@ if weekend_or_not in ['Saturday','Sunday']:
     print("Fiesta!") 
 else:
      print(":( worktime") 
+
+day = input('Please enter the day of the week: ')
+
+while day.lower() not in ['sunday','monday','tuesday','wednesday','thursday','friday','saturday']:
+    print('invalid input. please enter the full name of the day')
+    day = input('Please enter the day of the week:')
+
+if day.lower() in ['sunday', 'saturaday']:
+
 
 # c. create variables and make up values for
     #the number of hours worked in one week
@@ -33,6 +50,19 @@ if num_hours<=40:
 else:
     paycheck=(num_hours-40)*1.5*hour_wage+40*hour_wage
     print("Weekley pay is: "+str(paycheck))
+
+hourse_worked=45
+hourly_rate=50
+overtime_rate = hourly_rate *1.5
+
+if hours_worked <=40:
+    total_pay = hours_worked * hourly_rate
+else:
+    regular_pay=40*hourly_rate
+    overtime_pay=(hours_worked-40)* overtime_pay
+    total_pay=regular_pay + overtime_pay
+
+total_pay
 
 #2 Loop Basics
 
@@ -67,6 +97,10 @@ while i>=-10:
     print(i)
     i-=5
 
+i = 100
+while i >= -10:
+
+
 # Create a while loop that starts at 2, and displays the number squared on each line
 #  while the number is less than 1,000,000. Output should equal:
 # 2
@@ -77,6 +111,11 @@ while i>=-10:
 
 i=2
 while i<1000000:
+    print(i)
+    i=i**2
+
+i=2
+while i<1_000_000:
     print(i)
     i=i**2
     
@@ -100,6 +139,9 @@ num=int(num)
 for i in range(1,11):
     print(str(i)+"*"+str(num)+"="+str(i*num)) 
 
+for i in range(1,11):
+        print(f'{num} * {i} = {num')
+
 # Create a for loop that uses print to create the output shown below.
 
 for num in range(1,10):
@@ -120,6 +162,29 @@ for i in range(1,50,2):
         print("Yikes! Skipping number: "+str(i))
         continue
     print("Here is an odd number: "+str(i))
+
+#ravinder example:
+
+num = input('please enter a odd number between 1 and 50: ')
+
+    while True:
+        if (num.isdigit()= False or int(num) > or int(num) <1 or int(num)% 2==0:
+            print('invalid input')
+            num =  input('please enter a odd number between 1 and 50: ')
+        else:
+            break
+
+num = int(num)
+
+print('Number to skip is:', num)
+
+for i in range(1,50):
+    if i % 2 == 0:
+        continue
+    elif i == num:
+        print('yikes, skipping this number', i)
+    else:
+        print ('Here is an odd number', i)
 
 # 2.d The input function can be used to prompt for input and 
 # use that input in your python code. Prompt the user to enter a positive number 
