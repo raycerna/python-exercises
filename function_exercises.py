@@ -1,8 +1,5 @@
 # 1 
 
-from ast import Num
-
-
 def is_two(x):
     if int(x)==2:
         return True
@@ -60,12 +57,18 @@ def handle_commas(number):
 
 handle_commas("999,999,999")
 
+#ryan's example
 def handle_commas(some_input):
     if type(some_input) == str:
         return some_input.replace(",", "")
     return some_input
 
-some_input(9999999)
+some_input(999,999)
+
+def handle_commas(x):
+    if type(x) == str:
+        return x.replace(",", "")
+    return x
 
 
 #8
@@ -83,3 +86,46 @@ def get_letter_grade(num):
     else:
         return('F')
         
+#9
+
+def remove_vowels(x):
+  for i in "aeiouAEIOU":
+            x = x.replace(i,"")
+  return x
+
+remove_vowels("banana")
+
+#10
+
+def normalize_name(string):
+    string=string.lstrip().rstrip().lower().replace(' ','_')
+    counter=1
+    while True:
+        if string.isidentifier():
+            break
+        else:
+            string=string[counter:] 
+            counter +=1 
+    return string
+
+
+def normalize_name(string):
+    output = ''
+    string = string.lower()
+    for character in string:
+        if character.isidentifier() or character == ' ':
+            output += character
+    output = output.strip()
+    output = output.replace(' ', '_')
+    return output
+
+
+#11
+
+def cumulative_sum(num_list):
+    output = []
+    for i, num in enumerate(num_list):
+        sum_counter = sum(num_list[:i + 1])
+        output.append(sum_counter)
+    return output
+
