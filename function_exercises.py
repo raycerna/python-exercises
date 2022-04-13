@@ -37,7 +37,7 @@ def is_vowel(somestring):
     else:
         return False
 
- def is_vowel(x):
+def is_vowel(x):
     return x.lower() in ["a", "e", "i", "o", "u"]
 
 # 3
