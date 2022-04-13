@@ -182,5 +182,14 @@ def cumulative_sum(num_list):
         output.append(sum_counter)
     return output
 
+#bonus
 
+def twelveto24(time):
+    if time[-2:-1]=="am":
+        position=time.index(:)
+        twenty_four=int(time[:position])+12
+        time=str(twenty_four)+time[position+1:-2]
+    else:
+        time=time[:-2] 
+    return time    
 
