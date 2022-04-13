@@ -78,7 +78,7 @@ def capitalize_starting_consonant(string):
 def calculate_tip(tip_percent,bill):
     return (tip_percent/100*bill)
 
-calculate_tip(10,159)
+
 
 def calculate_tip(bill, tip_percentage=0.2):
     if type(tip_percentage) != float:
@@ -87,13 +87,14 @@ def calculate_tip(bill, tip_percentage=0.2):
         return 'the tip percentage must be between 0 and 1'
     return tip_percentage * bill
 
+calculate_tip(159,0.1)
+
 # 6
 
 def apply_discount(dis_per,orig_price):
     discount = orig_price * (dis_per/100)
     return orig_price - discount
 
-apply_discount(20, 199)
 
 # 7
 
@@ -108,7 +109,6 @@ def handle_commas(some_input):
         return some_input.replace(",", "")
     return some_input
 
-some_input(999,999)
 
 def handle_commas(x):
     if type(x) == str:
@@ -184,12 +184,12 @@ def cumulative_sum(num_list):
 
 #bonus
 
-def twelveto24(time):
+""" def twelveto24(time):
     if time[-2:-1]=="am":
-        position=time.index(:)
+        position=time.index (:)
         twenty_four=int(time[:position])+12
         time=str(twenty_four)+time[position+1:-2]
     else:
         time=time[:-2] 
-    return time    
+    return time """
 
